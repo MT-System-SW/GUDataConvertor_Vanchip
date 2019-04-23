@@ -104,20 +104,11 @@ namespace GUDataConvertor_Vanchip
                                     {
                                         var cell = line.Split(',');
                                         string lineTestName = ",,,,,,,,Test Name";
-                                        string lineUnits = ",,,,,,,,Units";
-                                        string lineLowerLimit = ",,,,,,,,Lower Limit";
-                                        string lineUpperLimit = ",,,,,,,,Upper Limit";
                                         for (int i = 3; i < cell.Length; i++)
                                         {
                                             lineTestName += "," + cell[i];
-                                            lineUnits += "," + "N/A";
-                                            lineLowerLimit += "," + double.MinValue;
-                                            lineUpperLimit += "," + double.MaxValue;
                                         }
                                         sw.WriteLine(lineTestName);
-                                        sw.WriteLine(lineUnits);
-                                        sw.WriteLine(lineLowerLimit);
-                                        sw.WriteLine(lineUpperLimit);
                                         sw.WriteLine();
                                         sr.ReadLine();
                                         sr.ReadLine();
